@@ -1,7 +1,7 @@
 import os
 import click 
 import yfinance as yf
-from datetime import date 
+from datetime import date, timedelta 
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy import Column, String, Date, Integer, Numeric 
@@ -27,7 +27,7 @@ class cSecurityPrices(base):
 @click.command() 
 @click.option('--datefrom',
         type=click.DateTime(formats=["%Y-%m-%d"]),
-        default=str(date.today()), 
+        default=str(date.today()-timedelta(days=3)), 
         help="date from"
         )
 @click.option('--dateto',
