@@ -2,3 +2,4 @@
 env
 price_downloader.egg-info
 **/__pycache__
+**/*.swp
