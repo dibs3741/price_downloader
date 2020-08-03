@@ -7,6 +7,9 @@ setup(
         install_requires=[
             'pandas',
             'yfinance',
+            'sqlalchemy',
+            'psycopg2',
+            'python-dotenv',
             'click'
             ],
         entry_points={
